@@ -2,9 +2,22 @@
 
 
 // Code your buildCrewArray function here:
-
-
 let idNumbers = [291, 414, 503, 599, 796, 890];
+
+function selectRandomEntry(array) {
+  return Math.floor(Math.random() * (array.length));
+}
+selectRandomEntry(idNumbers);
+
+let crewSelection = [];
+
+while(crewSelection.length < 3){
+  const selectedId = idNumbers[selectRandomEntry(idNumbers)];
+if(!crewSelection.includes(selectedId)) {
+crewSelection.push(selectedId);
+}
+}
+console.log(crewSelection);
 
 // Here are the candidates and the 'animals' array:
 let candidateA = {
